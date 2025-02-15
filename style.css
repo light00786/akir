@@ -1,0 +1,290 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+    background-color: #0e0e0e;
+    color: wheat;
+}
+
+html{
+    font-size: clamp(16px,1vw,20px);
+}
+
+section{
+    flex-direction: column;
+    align-items: center;
+display:flex;
+justify-content: center;
+padding: 0.5rem 2rem;
+}
+
+section h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 100;
+}
+section p {
+    line-height: 1.5rem;
+    font-size: 1.18rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-family: sans-serif;
+    opacity: 0.6;
+    
+}
+
+section img{
+    width:20rem
+}
+
+marquee{
+    margin-top: 3rem;
+   width:80%;
+}
+
+marquee ::after{
+    height:100%;
+    width:50%;
+    background-color:yellow;
+}
+.texts{
+    font-size: 2.5rem;
+  display:flex;
+  gap:2rem;
+  animation: marquee 10s  linear infinite both ;
+}
+
+.cards{
+    display:flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap:1.2rem
+}
+.card{
+   
+    height:fit-content;
+    width:20rem;
+    background-color: #181716;
+    border:1px solid wheat;
+   box-sizing: border-box;
+   padding: 1rem 1.5rem;
+}
+
+.card .icon{
+    height:1.5rem; 
+    width:1.5rem;
+    border:1px solid wheat;
+    border-radius: 100%;
+    padding: 0.2rem 0.2rem;
+    position: relative;
+    top:0.7rem
+    
+}
+
+.card .two{
+    display:flex;
+   
+    justify-content: center;
+   align-items: center;
+   gap:0.7rem
+}
+
+.card p{
+    opacity: 0.8;
+}
+
+.section-2 h1{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.section-2 .images{
+ display: flex;
+ flex-direction: column;
+ gap:1rem;
+
+ width: 100%;
+}
+
+.section-2 .card-1 img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+  
+}
+
+.section-2 .card-1{
+ height:15rem;
+ width:20rem;
+ background-color: blue;
+ border:1px solid black;
+ position: relative;
+}
+
+.section-2 .transparent{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top:80%;
+    backdrop-filter: blur(1rem);
+    padding: 0.2rem 0.3rem;
+    font-family: sans-serif;
+}
+
+
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@media (min-width: 768px) {
+    .cards{
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+       flex-wrap: wrap;
+        display:flex;
+        flex-direction: row;
+    }
+   
+    
+    .section-2{
+        width:100%;
+        text-align: center;
+    }
+        .section-2 h1{
+          display: flex;
+          justify-content: start;
+          align-items: start;
+        }
+          
+    
+        .section-2 .card-1{
+            height:20rem;
+            width:48%;
+            background-color: blue;
+            border:1px solid black
+           }
+    
+        .section-2 .images{
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap:1rem
+           }
+           
+        
+           
+           .section-2 .transparent{
+              font-size: 1.7rem;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               position: absolute;
+               width: 100%;
+               top:80%;
+               backdrop-filter: blur(1rem);
+               padding: 0.2rem 0.3rem;
+               font-family: sans-serif;
+           }
+}
+
+@media (min-width: 1024px) {
+
+    section h1 {
+    
+        line-height: 6rem;
+        font-size: 6rem;
+        font-weight: 100;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    section p {
+       
+      opacity: 0.4;
+        width:36%;
+      font-size: 1.2rem;
+      font-weight: 100; /* Changes to red on large screens */
+    }
+    
+    section marquee{
+        width:50%;
+        
+        
+    }
+
+    section .texts{
+       display:flex;
+       gap:3rem
+        
+    }
+    .cards{
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+       
+        display:flex;
+        flex-direction: row;
+    }
+    .card{
+        width:30%;
+    }
+     .card p{
+        width: fit-content;
+        text-align: start;
+    }
+.section-2{
+    width:100%;
+   
+    text-align: center;
+}
+    .section-2 h1{
+      display: flex;
+      justify-content: start;
+      align-items: start;
+
+    }
+      
+
+    .section-2 .card-1{
+        height:30rem;
+        width:48%;
+        background-color: blue;
+        border:1px solid black
+       }
+
+    .section-2 .images{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap:2rem
+       }
+       
+    
+       
+       .section-2 .transparent{
+          font-size: 2rem;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           position: absolute;
+           width: 100%;
+           top:80%;
+           backdrop-filter: blur(1rem);
+           padding: 0.2rem 0.3rem;
+           font-family: sans-serif;
+       }
+      
+}
